@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 1999-2017 netz98 GmbH (http://www.netz98.de)
+ *
+ * @see PROJECT_LICENSE.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+
+    <event name="controller_action_predispatch">
+        <observer name="n98_guillotine_controller_action_predispatch"
+                  instance="N98\Guillotine\Observer\FrontendBlacklistFilterObserver"/>
+    </event>
+
+</config>

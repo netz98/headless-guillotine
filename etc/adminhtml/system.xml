@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 1999-2017 netz98 GmbH (http://www.netz98.de)
+ *
+ * @see PROJECT_LICENSE.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+
+    <system>
+        <tab id="n98settings" translate="label" sortOrder="120">
+            <label>netz98 Settings</label>
+        </tab>
+        <section id="n98_headless" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Headless</label>
+            <tab>n98settings</tab>
+            <resource>N98_Guillotine::settings</resource>
+            <group id="guillotine" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Guillotine</label>
+                <field id="whitelist_patterns" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Whitelist patterns</label>
+                    <comment>One pattern per row (e.g. "^/rest/.*$")</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+
+</config>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 1999-2017 netz98 GmbH (http://www.netz98.de)
+ *
+ * @see PROJECT_LICENSE.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+
+    <module name="N98_Guillotine" setup_version="1.0.0">
+        <sequence>
+        </sequence>
+    </module>
+
+</config>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 1999-2017 netz98 GmbH (http://www.netz98.de)
+ *
+ * @see PROJECT_LICENSE.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="N98_Guillotine::settings" title="Guillotine Settings" sortOrder="1200"/>
+            </resource>
+        </resources>
+    </acl>
+
+</config>

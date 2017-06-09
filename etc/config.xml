@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 1999-2017 netz98 GmbH (http://www.netz98.de)
+ *
+ * @see PROJECT_LICENSE.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+
+    <default>
+        <n98_headless>
+            <guillotine>
+                <!-- n98_headless/guillotine/whitelist_patterns -->
+                <whitelist_patterns><![CDATA[^/rest/.*$
+^/(swagger|(swagger/.*))$
+]]></whitelist_patterns>
+            </guillotine>
+        </n98_headless>
+    </default>
+
+</config>

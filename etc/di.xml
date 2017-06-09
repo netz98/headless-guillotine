@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 1999-2017 netz98 GmbH (http://www.netz98.de)
+ *
+ * @see PROJECT_LICENSE.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="N98\Guillotine\Api\RequestFilterInterface"
+                type="N98\Guillotine\Service\RequestFilterService"/>
+
+    <preference for="N98\Guillotine\Api\FilterSettingsResolverInterface"
+                type="N98\Guillotine\Service\FilterSettingsResolverService"/>
+
+</config>
