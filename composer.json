@@ -18,7 +18,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "RM\\Guillotine\\": ""
+      "N98\\Guillotine\\": ""
     }
   }
 }
