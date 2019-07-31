@@ -1,6 +1,6 @@
 # N98_Guillotine
 
-A simple but useful module to disable frontend requests to implement a headless approch.
+A simple but useful module to disable frontend requests to implement a headless approach.
 
 ## Installation
 
