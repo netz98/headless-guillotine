@@ -1,21 +1,17 @@
 <?xml version="1.0"?>
 <!--
 /**
- * @copyright Copyright (c)  netz98 GmbH (https://www.netz98.de)
+ * @copyright Copyright (c) netz98 GmbH (https://www.netz98.de)
  *
  * @see PROJECT_LICENSE.txt
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
-
     <system>
-        <tab id="n98settings" translate="label" sortOrder="120">
-            <label>netz98 Settings</label>
-        </tab>
-        <section id="n98_headless" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+        <section id="n98_headless" translate="label" type="text" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Headless</label>
-            <tab>n98settings</tab>
+            <tab>security</tab>
             <resource>N98_Guillotine::settings</resource>
             <group id="guillotine" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Guillotine</label>
@@ -23,8 +19,12 @@
                     <label>Whitelist patterns</label>
                     <comment>One pattern per row (e.g. "^/rest/.*$")</comment>
                 </field>
+                <field id="throw_exception" translate="label comment" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Throw Exception</label>
+                    <comment>When enabled -> HTTP status 503 is retured. Disabled means that a message with HTTP status 200 is returned.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
             </group>
         </section>
     </system>
-
 </config>

@@ -1,11 +1,11 @@
 <?php
 /**
- * @copyright Copyright (c)  netz98 GmbH (https://www.netz98.de)
+ * @copyright Copyright (c) netz98 GmbH (https://www.netz98.de)
  *
  * @see PROJECT_LICENSE.txt
  */
 
-namespace N98\Guillotine\Tests\Unit\Service;
+namespace N98\Guillotine\Test\Unit\Service;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use N98\Guillotine\Api\FilterSettingsResolverInterface;
@@ -17,7 +17,7 @@ use PHPUnit_Framework_MockObject_MockObject as Mock;
  *
  * @covers \N98\Guillotine\Service\FilterSettingsResolverService
  */
-class FilterSettingsResolverServiceTest extends \PHPUnit_Framework_TestCase
+class FilterSettingsResolverServiceTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @param string $settings

@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright Copyright (c)  netz98 GmbH (https://www.netz98.de)
+ * @copyright Copyright (c) netz98 GmbH (https://www.netz98.de)
  *
  * @see PROJECT_LICENSE.txt
  */
