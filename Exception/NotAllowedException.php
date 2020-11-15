@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright Copyright (c) 1999-2017 netz98 GmbH (http://www.netz98.de)
+ * @copyright Copyright (c)  netz98 GmbH (https://www.netz98.de)
  *
  * @see PROJECT_LICENSE.txt
  */
@@ -11,7 +11,7 @@ use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Phrase;
 
 /**
- * Class NotAllowedException
+ * Exception in case of blocked requests
  *
  * @api
  */
