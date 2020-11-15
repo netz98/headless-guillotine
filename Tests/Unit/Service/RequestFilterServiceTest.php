@@ -13,7 +13,7 @@ use N98\Guillotine\Service\RequestFilterService;
 use PHPUnit_Framework_MockObject_MockObject as Mock;
 
 /**
- * Class RequestFilterServiceTest
+ * Test of service class RequestFilterService
  *
  * @covers \N98\Guillotine\Service\RequestFilterService
  */

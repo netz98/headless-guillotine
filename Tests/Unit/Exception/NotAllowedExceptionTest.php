@@ -11,7 +11,7 @@ use Magento\Framework\Phrase;
 use N98\Guillotine\Exception\NotAllowedException;
 
 /**
- * Class NotAllowedExceptionTest
+ * Test of class NotAllowedException
  *
  * @covers \N98\Guillotine\Exception\NotAllowedException
  */

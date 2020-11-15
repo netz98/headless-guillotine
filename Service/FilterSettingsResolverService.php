@@ -11,7 +11,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 use N98\Guillotine\Api\FilterSettingsResolverInterface;
 
 /**
- * Class FilterSettingsResolverService
+ * Resolves filter settings
  */
 class FilterSettingsResolverService implements FilterSettingsResolverInterface
 {

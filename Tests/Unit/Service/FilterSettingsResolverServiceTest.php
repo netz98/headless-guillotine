@@ -13,7 +13,7 @@ use N98\Guillotine\Service\FilterSettingsResolverService;
 use PHPUnit_Framework_MockObject_MockObject as Mock;
 
 /**
- * Class FilterSettingsResolverServiceTest
+ * Test of service class FilterSettingsResolverService
  *
  * @covers \N98\Guillotine\Service\FilterSettingsResolverService
  */

@@ -12,7 +12,7 @@ use N98\Guillotine\Api\RequestFilterInterface;
 use N98\Guillotine\Exception\NotAllowedException;
 
 /**
- * Class RequestFilterService
+ * Filters a request path agains a whitelist
  */
 class RequestFilterService implements RequestFilterInterface
 {

@@ -14,7 +14,7 @@ use N98\Guillotine\Observer\FrontendBlacklistFilterObserver;
 use PHPUnit_Framework_MockObject_MockObject as Mock;
 
 /**
- * Class FrontendBlacklistFilterObserverTest
+ * Test of class FrontendBlacklistFilterObserver
  *
  * @covers \N98\Guillotine\Observer\FrontendBlacklistFilterObserver
  */

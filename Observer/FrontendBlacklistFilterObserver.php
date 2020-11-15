@@ -12,7 +12,7 @@ use Magento\Framework\Event\ObserverInterface;
 use N98\Guillotine\Api\RequestFilterInterface;
 
 /**
- * Class FrontendBlacklistFilterObserver
+ * Observer to filter frontend requests
  */
 class FrontendBlacklistFilterObserver implements ObserverInterface
 {
