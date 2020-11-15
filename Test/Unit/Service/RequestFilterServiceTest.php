@@ -1,14 +1,18 @@
 <?php
 /**
- * @copyright Copyright (c)  netz98 GmbH (https://www.netz98.de)
+ * @copyright Copyright (c) netz98 GmbH (https://www.netz98.de)
  *
  * @see PROJECT_LICENSE.txt
  */
 
-namespace N98\Guillotine\Tests\Unit\Service;
+namespace N98\Guillotine\Test\Unit\Service;
 
+use Magento\Framework\App\ResponseInterface;
+use Magento\Framework\Controller\Result\Raw;
+use Magento\Framework\Controller\Result\RawFactory;
 use N98\Guillotine\Api\FilterSettingsResolverInterface;
 use N98\Guillotine\Exception\NotAllowedException;
+use N98\Guillotine\Model\ConfigInterface;
 use N98\Guillotine\Service\RequestFilterService;
 use PHPUnit_Framework_MockObject_MockObject as Mock;
 
@@ -17,17 +21,18 @@ use PHPUnit_Framework_MockObject_MockObject as Mock;
  *
  * @covers \N98\Guillotine\Service\RequestFilterService
  */
-class RequestFilterServiceTest extends \PHPUnit_Framework_TestCase
+class RequestFilterServiceTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var RequestFilterService
      */
     private $service;
+    private $configMock;
 
     /**
      * @inheritdoc
      */
-    public function setUp()
+    protected function setUp(): void
     {
         $resolverMock = $this->getMockBuilder(FilterSettingsResolverInterface::class)
             ->getMock();
@@ -43,7 +48,18 @@ class RequestFilterServiceTest extends \PHPUnit_Framework_TestCase
                 ]
             );
 
-        $this->service = new RequestFilterService($resolverMock);
+        $this->configMock = $this->createMock(ConfigInterface::class);
+
+        $responseMock = $this->createMock(ResponseInterface::class);
+        $rawFactoryMock = $this->createMock(RawFactory::class);
+        $rawFactoryMock->method('create')->willReturn($this->createMock(Raw::class));
+
+        $this->service = new RequestFilterService(
+            $resolverMock,
+            $this->configMock,
+            $responseMock,
+            $rawFactoryMock
+        );
     }
 
     /**
@@ -55,7 +71,10 @@ class RequestFilterServiceTest extends \PHPUnit_Framework_TestCase
     public function test($requestPath, $expectException)
     {
         if ($expectException) {
-            $this->setExpectedException(NotAllowedException::class);
+            $this->configMock->method('shouldThrowException')->willReturn(true);
+            $this->expectException(NotAllowedException::class);
+        } else {
+            $this->configMock->method('shouldThrowException')->willReturn(false);
         }
 
         $this->service->execute($requestPath);

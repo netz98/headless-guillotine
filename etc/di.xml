@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 /**
- * @copyright Copyright (c)  netz98 GmbH (https://www.netz98.de)
+ * @copyright Copyright (c) netz98 GmbH (https://www.netz98.de)
  *
  * @see PROJECT_LICENSE.txt
  */
@@ -9,10 +9,13 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
+    <preference for="N98\Guillotine\Model\ConfigInterface"
+                type="N98\Guillotine\Model\Config" />
+
     <preference for="N98\Guillotine\Api\RequestFilterInterface"
-                type="N98\Guillotine\Service\RequestFilterService"/>
+                type="N98\Guillotine\Service\RequestFilterService" />
 
     <preference for="N98\Guillotine\Api\FilterSettingsResolverInterface"
-                type="N98\Guillotine\Service\FilterSettingsResolverService"/>
+                type="N98\Guillotine\Service\FilterSettingsResolverService" />
 
 </config>

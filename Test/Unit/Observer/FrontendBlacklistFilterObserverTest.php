@@ -1,11 +1,11 @@
 <?php
 /**
- * @copyright Copyright (c)  netz98 GmbH (https://www.netz98.de)
+ * @copyright Copyright (c) netz98 GmbH (https://www.netz98.de)
  *
  * @see PROJECT_LICENSE.txt
  */
 
-namespace N98\Guillotine\Tests\Unit\Observer;
+namespace N98\Guillotine\Test\Unit\Observer;
 
 use Magento\Framework\Event;
 use Magento\Framework\Event\Observer;
@@ -18,7 +18,7 @@ use PHPUnit_Framework_MockObject_MockObject as Mock;
  *
  * @covers \N98\Guillotine\Observer\FrontendBlacklistFilterObserver
  */
-class FrontendBlacklistFilterObserverTest extends \PHPUnit_Framework_TestCase
+class FrontendBlacklistFilterObserverTest extends \PHPUnit\Framework\TestCase
 {
     const TEST_PATH = '/test/path';
 

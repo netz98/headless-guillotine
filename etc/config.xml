@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 /**
- * @copyright Copyright (c)  netz98 GmbH (https://www.netz98.de)
+ * @copyright Copyright (c) netz98 GmbH (https://www.netz98.de)
  *
  * @see PROJECT_LICENSE.txt
  */
@@ -16,6 +16,7 @@
                 <whitelist_patterns><![CDATA[^/rest/.*$
 ^/(swagger|(swagger/.*))$
 ]]></whitelist_patterns>
+                <throw_exception>1</throw_exception>
             </guillotine>
         </n98_headless>
     </default>

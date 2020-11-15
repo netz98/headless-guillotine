@@ -1,41 +1,70 @@
 <?php
 /**
- * @copyright Copyright (c)  netz98 GmbH (https://www.netz98.de)
+ * @copyright Copyright (c) netz98 GmbH (https://www.netz98.de)
  *
  * @see PROJECT_LICENSE.txt
  */
 
 namespace N98\Guillotine\Service;
 
+use Magento\Framework\App\ResponseInterface;
+use Magento\Framework\Controller\Result\Raw;
+use Magento\Framework\Controller\Result\RawFactory;
 use N98\Guillotine\Api\FilterSettingsResolverInterface;
 use N98\Guillotine\Api\RequestFilterInterface;
 use N98\Guillotine\Exception\NotAllowedException;
+use N98\Guillotine\Model\ConfigInterface;
 
 /**
- * Filters a request path agains a whitelist
+ * Filters a request path against a whitelist
  */
 class RequestFilterService implements RequestFilterInterface
 {
     /**
-     * @var \N98\Guillotine\Api\FilterSettingsResolverInterface
+     * @var FilterSettingsResolverInterface
      */
     private $filterSettingsResolver;
+
+    /**
+     * @var ConfigInterface
+     */
+    private $config;
+
+    /**
+     * @var RawFactory
+     */
+    private $rawResultFactory;
+
+    /**
+     * @var ResponseInterface
+     */
+    private ResponseInterface $response;
 
     /**
      * RequestFilterService constructor.
      *
      * @param \N98\Guillotine\Api\FilterSettingsResolverInterface $filterSettingsResolver
+     * @param \N98\Guillotine\Model\ConfigInterface $config
+     * @param \Magento\Framework\App\ResponseInterface $response
+     * @param \Magento\Framework\Controller\Result\RawFactory $rawResultFactory
      */
-    public function __construct(FilterSettingsResolverInterface $filterSettingsResolver)
-    {
+    public function __construct(
+        FilterSettingsResolverInterface $filterSettingsResolver,
+        ConfigInterface $config,
+        ResponseInterface $response,
+        RawFactory $rawResultFactory
+    ) {
         $this->filterSettingsResolver = $filterSettingsResolver;
+        $this->config = $config;
+        $this->rawResultFactory = $rawResultFactory;
+        $this->response = $response;
     }
 
     /**
      * @param string $requestPath
      *
      * @return void
-     * @throws \N98\Guillotine\Exception\NotAllowedException
+     * @throws NotAllowedException
      */
     public function execute($requestPath)
     {
@@ -47,6 +76,14 @@ class RequestFilterService implements RequestFilterInterface
             }
         }
 
-        throw NotAllowedException::notAllowed();
+        if ($this->config->shouldThrowException()) {
+            throw NotAllowedException::notAllowed();
+        }
+
+        /** @var Raw $rawResult */
+        $rawResult = $this->rawResultFactory->create();
+        $rawResult->setContents(NotAllowedException::MSG_BLOCKED_DEFAULT);
+        $rawResult->renderResult($this->response);
+        $this->response->sendResponse();
     }
 }

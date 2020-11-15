@@ -1,11 +1,11 @@
 <?php
 /**
- * @copyright Copyright (c)  netz98 GmbH (https://www.netz98.de)
+ * @copyright Copyright (c) netz98 GmbH (https://www.netz98.de)
  *
  * @see PROJECT_LICENSE.txt
  */
 
-namespace N98\Guillotine\Tests\Unit\Exception;
+namespace N98\Guillotine\Test\Unit\Exception;
 
 use Magento\Framework\Phrase;
 use N98\Guillotine\Exception\NotAllowedException;
@@ -15,7 +15,7 @@ use N98\Guillotine\Exception\NotAllowedException;
  *
  * @covers \N98\Guillotine\Exception\NotAllowedException
  */
-class NotAllowedExceptionTest extends \PHPUnit_Framework_TestCase
+class NotAllowedExceptionTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @param string|null $msg
@@ -27,7 +27,6 @@ class NotAllowedExceptionTest extends \PHPUnit_Framework_TestCase
         try {
             throw NotAllowedException::notAllowed($msg);
         } catch (NotAllowedException $exception) {
-            $this->assertAttributeInstanceOf(Phrase::class, 'phrase', $exception);
             $this->assertEquals($msg ?: NotAllowedException::MSG_BLOCKED_DEFAULT, $exception->getRawMessage());
         }
     }
