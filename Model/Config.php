@@ -17,14 +17,14 @@ class Config implements ConfigInterface
     const XML_PATH_THROW_EXCEPTION = 'n98_headless/guillotine/throw_exception';
 
     /**
-     * @var ScopeConfigInterface
+     * @var \Magento\Framework\App\Config\ScopeConfigInterface
      */
-    private ScopeConfigInterface $scopeConfig;
+    private $scopeConfig;
 
     /**
      * Config constructor.
      *
-     * @param ScopeConfigInterface $scopeConfig
+     * @param \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
      */
     public function __construct(ScopeConfigInterface $scopeConfig)
     {

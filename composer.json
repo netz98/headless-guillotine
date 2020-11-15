@@ -1,6 +1,6 @@
 {
   "name": "n98/headless-guillotine",
-  "description": "Frontend routing whiteliste configurations for headless setups.",
+  "description": "Frontend routing whitelist configurations for headless setups.",
   "license": "MIT",
   "require": {
     "php": "^7.0"

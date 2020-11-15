@@ -21,24 +21,24 @@ use N98\Guillotine\Model\ConfigInterface;
 class RequestFilterService implements RequestFilterInterface
 {
     /**
-     * @var FilterSettingsResolverInterface
+     * @var \N98\Guillotine\Api\FilterSettingsResolverInterface
      */
     private $filterSettingsResolver;
 
     /**
-     * @var ConfigInterface
+     * @var \N98\Guillotine\Model\ConfigInterface
      */
     private $config;
 
     /**
-     * @var RawFactory
+     * @var \Magento\Framework\Controller\Result\RawFactory
      */
     private $rawResultFactory;
 
     /**
-     * @var ResponseInterface
+     * @var \Magento\Framework\App\ResponseInterface
      */
-    private ResponseInterface $response;
+    private $response;
 
     /**
      * RequestFilterService constructor.
@@ -64,7 +64,7 @@ class RequestFilterService implements RequestFilterInterface
      * @param string $requestPath
      *
      * @return void
-     * @throws NotAllowedException
+     * @throws \N98\Guillotine\Exception\NotAllowedException
      */
     public function execute($requestPath)
     {
