@@ -21,8 +21,8 @@ class NotAllowedException extends LocalizedException
 
     /**
      * @param Phrase|null $msg
-     *
      * @return \N98\Guillotine\Exception\NotAllowedException
+     * phpcs:disable Magento2.Functions.StaticFunction
      */
     public static function notAllowed($msg = null)
     {
