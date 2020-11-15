@@ -21,7 +21,7 @@
                 </field>
                 <field id="throw_exception" translate="label comment" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Throw Exception</label>
-                    <comment>When enabled -> HTTP status 503 is retured. Disabled means that a message with HTTP status 200 is returned.</comment>
+                    <comment>When enabled -> HTTP status 500 is retured. Disabled means that a message with HTTP status 200 is returned.</comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>
