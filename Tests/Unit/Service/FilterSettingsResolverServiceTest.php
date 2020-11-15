@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright Copyright (c) 1999-2017 netz98 GmbH (http://www.netz98.de)
+ * @copyright Copyright (c)  netz98 GmbH (https://www.netz98.de)
  *
  * @see PROJECT_LICENSE.txt
  */
@@ -13,7 +13,7 @@ use N98\Guillotine\Service\FilterSettingsResolverService;
 use PHPUnit_Framework_MockObject_MockObject as Mock;
 
 /**
- * Class FilterSettingsResolverServiceTest
+ * Test of service class FilterSettingsResolverService
  *
  * @covers \N98\Guillotine\Service\FilterSettingsResolverService
  */

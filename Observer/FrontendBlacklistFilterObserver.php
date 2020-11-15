@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright Copyright (c) 1999-2017 netz98 GmbH (http://www.netz98.de)
+ * @copyright Copyright (c)  netz98 GmbH (https://www.netz98.de)
  *
  * @see PROJECT_LICENSE.txt
  */
@@ -12,7 +12,7 @@ use Magento\Framework\Event\ObserverInterface;
 use N98\Guillotine\Api\RequestFilterInterface;
 
 /**
- * Class FrontendBlacklistFilterObserver
+ * Observer to filter frontend requests
  */
 class FrontendBlacklistFilterObserver implements ObserverInterface
 {
