@@ -1,5 +1,7 @@
 # N98_Guillotine
 
+![Maintenance Badge](https://img.shields.io/maintenance/yes/2021.svg)
+
 A simple but useful module to disable frontend requests to implement a headless approach.
 
 ## Installation
