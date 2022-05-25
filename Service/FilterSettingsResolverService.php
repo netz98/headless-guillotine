@@ -31,6 +31,8 @@ class FilterSettingsResolverService implements FilterSettingsResolverInterface
     }
 
     /**
+     * Execute filter settings resolver
+     *
      * @return string[]
      */
     public function execute()

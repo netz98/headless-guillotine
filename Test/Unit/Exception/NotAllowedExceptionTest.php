@@ -7,7 +7,6 @@
 
 namespace N98\Guillotine\Test\Unit\Exception;
 
-use Magento\Framework\Phrase;
 use N98\Guillotine\Exception\NotAllowedException;
 
 /**

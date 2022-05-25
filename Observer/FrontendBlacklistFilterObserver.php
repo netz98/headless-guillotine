@@ -32,8 +32,9 @@ class FrontendBlacklistFilterObserver implements ObserverInterface
     }
 
     /**
-     * @param Observer $observer
+     * Execute observer
      *
+     * @param Observer $observer
      * @return void
      */
     public function execute(Observer $observer)

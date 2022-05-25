@@ -14,7 +14,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
  */
 class Config implements ConfigInterface
 {
-    const XML_PATH_THROW_EXCEPTION = 'n98_headless/guillotine/throw_exception';
+    private const XML_PATH_THROW_EXCEPTION = 'n98_headless/guillotine/throw_exception';
 
     /**
      * @var \Magento\Framework\App\Config\ScopeConfigInterface

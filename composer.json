@@ -3,7 +3,7 @@
   "description": "Frontend routing whitelist configurations for headless setups.",
   "license": "MIT",
   "require": {
-    "php": "^7.0"
+    "php": "^7.0 || ~8.1.0"
   },
   "type": "magento2-module",
   "authors": [

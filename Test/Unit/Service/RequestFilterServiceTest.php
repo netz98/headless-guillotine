@@ -27,6 +27,10 @@ class RequestFilterServiceTest extends \PHPUnit\Framework\TestCase
      * @var RequestFilterService
      */
     private $service;
+
+    /**
+     * @var ConfigInterface
+     */
     private $configMock;
 
     /**
