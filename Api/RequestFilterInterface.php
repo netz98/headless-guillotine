@@ -15,8 +15,9 @@ namespace N98\Guillotine\Api;
 interface RequestFilterInterface
 {
     /**
-     * @param string $requestPath
+     * Execute request filter service
      *
+     * @param string $requestPath
      * @return void
      * @throws \N98\Guillotine\Exception\NotAllowedException
      */

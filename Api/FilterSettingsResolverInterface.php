@@ -14,9 +14,11 @@ namespace N98\Guillotine\Api;
  */
 interface FilterSettingsResolverInterface
 {
-    const SCOPE_CONFIG_WHITELIST_PATTERNS = 'n98_headless/guillotine/whitelist_patterns';
+    public const SCOPE_CONFIG_WHITELIST_PATTERNS = 'n98_headless/guillotine/whitelist_patterns';
 
     /**
+     * Execute filter settings resolver
+     *
      * @return string[]
      */
     public function execute();

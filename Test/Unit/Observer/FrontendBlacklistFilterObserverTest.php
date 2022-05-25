@@ -20,7 +20,7 @@ use PHPUnit_Framework_MockObject_MockObject as Mock;
  */
 class FrontendBlacklistFilterObserverTest extends \PHPUnit\Framework\TestCase
 {
-    const TEST_PATH = '/test/path';
+    private const TEST_PATH = '/test/path';
 
     public function test()
     {

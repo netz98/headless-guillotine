@@ -17,7 +17,10 @@ jobs:
           MAGENTO_VERSION: '2.3.4'
       - uses: docker://yireo/github-actions-magento-unit-tests:7.3
         env:
-          MAGENTO_VERSION: '2.3.5-p2'
+          MAGENTO_VERSION: '2.3.7-p3'
       - uses: docker://yireo/github-actions-magento-unit-tests:7.4
         env:
-          MAGENTO_VERSION: '2.4.0'
+          MAGENTO_VERSION: '2.4.3-p2'
+      - uses: docker://yireo/github-actions-magento-unit-tests:8.1
+        env:
+          MAGENTO_VERSION: '2.4.4'

@@ -17,9 +17,11 @@ use Magento\Framework\Phrase;
  */
 class NotAllowedException extends LocalizedException
 {
-    const MSG_BLOCKED_DEFAULT = 'The requested page is blocked.';
+    public const MSG_BLOCKED_DEFAULT = 'The requested page is blocked.';
 
     /**
+     * Throw notAllowed exception
+     *
      * @param Phrase|null $msg
      * @return \N98\Guillotine\Exception\NotAllowedException
      * phpcs:disable Magento2.Functions.StaticFunction
