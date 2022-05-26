@@ -15,6 +15,7 @@
                 <!-- n98_headless/guillotine/whitelist_patterns -->
                 <whitelist_patterns><![CDATA[^/rest/.*$
 ^/(swagger|(swagger/.*))$
+^/graphql/.*$
 ]]></whitelist_patterns>
                 <throw_exception>1</throw_exception>
             </guillotine>
