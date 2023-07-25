@@ -16,11 +16,6 @@
                 <whitelist_patterns><![CDATA[^/rest/.*$
 ^/(swagger|(swagger/.*))$
 ^/graphql/.*$
-^/mollie/.*$
-^/shipping/.*$
-^/robots.txt$
-^/favicon.ico$
-^/channable/.*$
 ]]></whitelist_patterns>
                 <throw_exception>1</throw_exception>
             </guillotine>
